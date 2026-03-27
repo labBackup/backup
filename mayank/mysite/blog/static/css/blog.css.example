@@ -1,0 +1,88 @@
+body {
+
+}
+
+a {
+
+}
+
+#sidebar {
+
+}
+
+#sidebar h1 {
+
+}
+
+#sidebar p {
+
+}
+
+#content {
+
+}
+
+#postlist {
+
+}
+
+#postlist h1 {
+
+}
+
+.pagination {
+
+}
+
+.step-links a {
+
+}
+
+.post {
+
+}
+
+
+.details {
+
+}
+
+.shared {
+
+}
+
+.shared h1 {
+
+}
+
+.shared button {
+
+}
+
+.shared button:hover {
+
+}
+
+.shared p {
+
+}
+
+.shared input,
+.shared textarea {
+
+}
+
+
+
+.commentForm h1 {
+
+}
+
+.commentForm p {
+
+}
+
+.commentForm input,
+.commentForm textarea {
+
+}
