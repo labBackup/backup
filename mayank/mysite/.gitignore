@@ -1,5 +1,0 @@
-
-.env*
-.flaskenv*
-!.env.project
-!.env.vault# ignore blog CSS local file\nblog/static/css/blog.css
