@@ -1,5 +1,5 @@
 {% extends "blog/base.html" %}
-
+{% load blog_tags %}
 {% block title %}Posts{% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@
                 {% endfor %}
             </p>
             <p class="date">Published {{ post.publish }} by {{ post.author }}</p>
-            <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+            <p>{{ post.body|markdown|truncatewords_html:80|safe }}</p>
         </div>
     {% endfor %}
     </div>
