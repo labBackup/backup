@@ -8,27 +8,29 @@
 <!-- <script src="{% static 'js/palette-switcher.js' %}"></script> -->
 </head>
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/blog">Blog</a>
         <a href="/admin">Admin</a>
-    </div> 
-    <div id='sidebar'>
-        <h1>My Blog </h1>
-        <p>This is my blog</p>
-        <p>I've written {% total_posts %} posts so far.</p>
-        <h3>Latest Posts</h3>
-        {% show_latest_posts 3 %}
-        <h3>Most Commented Posts</h3>
-        {% get_most_commented_posts as most_commented_posts %}
-        {% for post in most_commented_posts %}
-            <a href="{{ post.get_absolute_url }}"> {{ post.title }} </a> <br>
-        {% endfor %}
-    </div>
-    <div id='content'>
-        {% block content %}
-        {% endblock %}
-    </div>
+    </nav>
+    <main class="main-container">
+        <aside id='sidebar'>
+            <h1>My Blog</h1>
+            <p>This is my blog</p>
+            <p>I've written {% total_posts %} posts so far.</p>
+            <h3>Latest Posts</h3>
+            {% show_latest_posts 3 %}
+            <h3>Most Commented Posts</h3>
+            {% get_most_commented_posts as most_commented_posts %}
+            {% for post in most_commented_posts %}
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            {% endfor %}
+        </aside>
+        <div id='content'>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
 </body>
 </html>

@@ -1,16 +1,16 @@
 {% extends "blog/base.html" %}
 {% block title%}Share Post{% endblock %}
 {% block content %}
-    <div class='shared'>
+    <section class='shared'>
         {% comment %} Use in line css to style the form {% endcomment %}
         {% if sent %}
             <h1>E-mail successfully sent</h1>
-            <p style="text-align: center;">
+            <p>
                 "{{ post.title }}" has been sent to {{ form.cleaned_data.to }}.
             </p>
-            <p style="text-align: center;"><a href="{{ post.get_absolute_url }}">Back to the Post</a></p>
+            <p><a href="{{ post.get_absolute_url }}">← Back to the Post</a></p>
         {% else %}
-            <p style="text-align: center;"><a href="{{ post.get_absolute_url }}">Back to the Post</a></p>
+            <p><a href="{{ post.get_absolute_url }}">← Back to the Post</a></p>
             <h1>Share "{{ post.title }}" by e-mail</h1>
             <form method="post">
                 {{ form.as_p }}
@@ -18,5 +18,5 @@
                 <button type="submit">Send e-mail</button>
             </form>
         {% endif %}
-    </div>
+    </section>
 {% endblock %}
